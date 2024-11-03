@@ -1,0 +1,764 @@
+{
+    "status": "OK",
+    "copyright": "Copyright (c) 2024 The New York Times Company.  All Rights Reserved.",
+    "num_results": 15,
+    "last_modified": "2024-09-12T17:25:02-04:00",
+    "results": [
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 1,
+            "rank_last_week": 1,
+            "weeks_on_list": 33,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/1649374046?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "1649374046",
+                    "isbn13": "9781649374042"
+                },
+                {
+                    "isbn10": "1649374089",
+                    "isbn13": "9781649374080"
+                },
+                {
+                    "isbn10": "1705085059",
+                    "isbn13": "9781705085059"
+                },
+                {
+                    "isbn10": "1705085032",
+                    "isbn13": "9781705085035"
+                },
+                {
+                    "isbn10": "1649376162",
+                    "isbn13": "9781649376169"
+                },
+                {
+                    "isbn10": "1649377371",
+                    "isbn13": "9781649377371"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "FOURTH WING",
+                    "description": "Violet Sorrengail is urged by the commanding general, who also is her mother, to become a candidate for the elite dragon riders.",
+                    "contributor": "by Rebecca Yarros",
+                    "author": "Rebecca Yarros",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Red Tower",
+                    "primary_isbn13": "9781649374042",
+                    "primary_isbn10": "1649374046"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        },
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 2,
+            "rank_last_week": 2,
+            "weeks_on_list": 18,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/0593422945?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "0593422945",
+                    "isbn13": "9780593422946"
+                },
+                {
+                    "isbn10": "0593422961",
+                    "isbn13": "9780593422960"
+                },
+                {
+                    "isbn10": "0593684125",
+                    "isbn13": "9780593684122"
+                },
+                {
+                    "isbn10": "0593684141",
+                    "isbn13": "9780593684146"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "THE HEAVEN & EARTH GROCERY STORE",
+                    "description": "Secrets held by the residents of a dilapidated neighborhood come to life when a skeleton is found at the bottom of a well.",
+                    "contributor": "by James McBride",
+                    "author": "James McBride",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Riverhead",
+                    "primary_isbn13": "9780593422946",
+                    "primary_isbn10": "0593422945"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        },
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 3,
+            "rank_last_week": 3,
+            "weeks_on_list": 7,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/1649374178?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "1649374178",
+                    "isbn13": "9781649374172"
+                },
+                {
+                    "isbn10": "1705085083",
+                    "isbn13": "9781705085080"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "IRON FLAME",
+                    "description": "The second book in the Empyrean series. Violet Sorrengail’s next round of training might require her to betray the man she loves.",
+                    "contributor": "by Rebecca Yarros",
+                    "author": "Rebecca Yarros",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Red Tower",
+                    "primary_isbn13": "9781649374172",
+                    "primary_isbn10": "1649374178"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        },
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 4,
+            "rank_last_week": 4,
+            "weeks_on_list": 10,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/0385548958?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "0385548958",
+                    "isbn13": "9780385548953"
+                },
+                {
+                    "isbn10": "0385548966",
+                    "isbn13": "9780385548960"
+                },
+                {
+                    "isbn10": "0593607481",
+                    "isbn13": "9780593607480"
+                },
+                {
+                    "isbn10": "0385548974",
+                    "isbn13": "9780385548977"
+                },
+                {
+                    "isbn10": "0593685288",
+                    "isbn13": "9780593685280"
+                },
+                {
+                    "isbn10": "0593685601",
+                    "isbn13": "9780593685600"
+                },
+                {
+                    "isbn10": "0593669894",
+                    "isbn13": "9780593669891"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "THE EXCHANGE",
+                    "description": "In a sequel to “The Firm,” Mitch McDeere, who is now a partner at the world’s largest law firm, gets caught up in a sinister plot.",
+                    "contributor": "by John Grisham",
+                    "author": "John Grisham",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Doubleday",
+                    "primary_isbn13": "9780385548953",
+                    "primary_isbn10": "0385548958"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        },
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 5,
+            "rank_last_week": 5,
+            "weeks_on_list": 85,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/038554734X?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "038554734X",
+                    "isbn13": "9780385547345"
+                },
+                {
+                    "isbn10": "0593507533",
+                    "isbn13": "9780593507537"
+                },
+                {
+                    "isbn10": "0385547374",
+                    "isbn13": "9780385547376"
+                },
+                {
+                    "isbn10": "0593862406",
+                    "isbn13": "9780593862407"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "LESSONS IN CHEMISTRY",
+                    "description": "A scientist and single mother living in California in the 1960s becomes a star on a TV cooking show.",
+                    "contributor": "by Bonnie Garmus",
+                    "author": "Bonnie Garmus",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Doubleday",
+                    "primary_isbn13": "9780385547345",
+                    "primary_isbn10": "038554734X"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        },
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 6,
+            "rank_last_week": 7,
+            "weeks_on_list": 16,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/1668016133?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "1668016133",
+                    "isbn13": "9781668016138"
+                },
+                {
+                    "isbn10": "1668014955",
+                    "isbn13": "9781668014950"
+                },
+                {
+                    "isbn10": "1797161407",
+                    "isbn13": "9781797161402"
+                },
+                {
+                    "isbn10": "1668014947",
+                    "isbn13": "9781668014943"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "HOLLY",
+                    "description": "The private detective Holly Gibney investigates whether a married pair of octogenarian academics had anything to do with Bonnie Dahl’s disappearance.",
+                    "contributor": "by Stephen King",
+                    "author": "Stephen King",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Scribner",
+                    "primary_isbn13": "9781668016138",
+                    "primary_isbn10": "1668016133"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        },
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 7,
+            "rank_last_week": 6,
+            "weeks_on_list": 6,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/0062406655?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "0062406655",
+                    "isbn13": "9780062406651"
+                },
+                {
+                    "isbn10": "0062406671",
+                    "isbn13": "9780062406675"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "THE LITTLE LIAR",
+                    "description": "The actions of an 11-year-old boy help facilitate the delivery of Jewish residents, including his family, to Auschwitz.",
+                    "contributor": "by Mitch Albom",
+                    "author": "Mitch Albom",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Harper",
+                    "primary_isbn13": "9780062406651",
+                    "primary_isbn10": "0062406655"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        },
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 8,
+            "rank_last_week": 9,
+            "weeks_on_list": 5,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/0316402486?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "0316402486",
+                    "isbn13": "9780316402484"
+                },
+                {
+                    "isbn10": "0316402583",
+                    "isbn13": "9780316402583"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "ALEX CROSS MUST DIE",
+                    "description": "The 32nd book in the Alex Cross series. When a jet is gunned down, Cross goes back into action.",
+                    "contributor": "by James Patterson",
+                    "author": "James Patterson",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Little, Brown",
+                    "primary_isbn13": "9780316402484",
+                    "primary_isbn10": "0316402486"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        },
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 9,
+            "rank_last_week": 12,
+            "weeks_on_list": 60,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/0063251922?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "0063251922",
+                    "isbn13": "9780063251922"
+                },
+                {
+                    "isbn10": "006325199X",
+                    "isbn13": "9780063251991"
+                },
+                {
+                    "isbn10": "0063251981",
+                    "isbn13": "9780063251984"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "DEMON COPPERHEAD",
+                    "description": "Winner of a 2023 Pulitzer Prize for fiction. A reimagining of Charles Dickens’s “David Copperfield” set in the mountains of southern Appalachia.",
+                    "contributor": "by Barbara Kingsolver",
+                    "author": "Barbara Kingsolver",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Harper",
+                    "primary_isbn13": "9780063251922",
+                    "primary_isbn10": "0063251922"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        },
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 10,
+            "rank_last_week": 8,
+            "weeks_on_list": 18,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/006332752X?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "006332752X",
+                    "isbn13": "9780063327528"
+                },
+                {
+                    "isbn10": "0063327546",
+                    "isbn13": "9780063327542"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "TOM LAKE",
+                    "description": "Three daughters, who return to their family orchard in the spring of 2020, learn about their mother’s relationship with a famous actor.",
+                    "contributor": "by Ann Patchett",
+                    "author": "Ann Patchett",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Harper",
+                    "primary_isbn13": "9780063327528",
+                    "primary_isbn10": "006332752X"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        },
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 11,
+            "rank_last_week": 10,
+            "weeks_on_list": 6,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/1538719916?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "1538719916",
+                    "isbn13": "9781538719916"
+                },
+                {
+                    "isbn10": "1538719932",
+                    "isbn13": "9781538719930"
+                },
+                {
+                    "isbn10": "1538719924",
+                    "isbn13": "9781538719923"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "THE EDGE",
+                    "description": "The second book in the 6:20 Man series. Travis Devine investigates the murder of the C.I.A. operative Jenny Silkwell in rural Maine.",
+                    "contributor": "by David Baldacci",
+                    "author": "David Baldacci",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Grand Central",
+                    "primary_isbn13": "9781538719916",
+                    "primary_isbn10": "1538719916"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        },
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 12,
+            "rank_last_week": 11,
+            "weeks_on_list": 32,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/0802162177?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "0802162177",
+                    "isbn13": "9780802162175"
+                },
+                {
+                    "isbn10": "1705070248",
+                    "isbn13": "9781705070246"
+                },
+                {
+                    "isbn10": "1705070221",
+                    "isbn13": "9781705070222"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "THE COVENANT OF WATER",
+                    "description": "Three generations of a family living on South India’s Malabar Coast suffer the loss of a family member by drowning.",
+                    "contributor": "by Abraham Verghese",
+                    "author": "Abraham Verghese",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Grove",
+                    "primary_isbn13": "9780802162175",
+                    "primary_isbn10": "0802162177"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        },
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 13,
+            "rank_last_week": 15,
+            "weeks_on_list": 7,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/1984818589?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "1984818589",
+                    "isbn13": "9781984818584"
+                },
+                {
+                    "isbn10": "1984818597",
+                    "isbn13": "9781984818591"
+                },
+                {
+                    "isbn10": "0593452801",
+                    "isbn13": "9780593452806"
+                },
+                {
+                    "isbn10": "0593452798",
+                    "isbn13": "9780593452790"
+                },
+                {
+                    "isbn10": "1984818619",
+                    "isbn13": "9781984818614"
+                },
+                {
+                    "isbn10": "1984818600",
+                    "isbn13": "9781984818607"
+                },
+                {
+                    "isbn10": "0593793617",
+                    "isbn13": "9780593793619"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "THE SECRET",
+                    "description": "The 28th book in the Jack Reacher series. It’s 1992 and Reacher looks into the cause of a string of mysterious deaths.",
+                    "contributor": "by Lee Child and Andrew Child",
+                    "author": "Lee Child and Andrew Child",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Delacorte",
+                    "primary_isbn13": "9781984818584",
+                    "primary_isbn10": "1984818589"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        },
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 14,
+            "rank_last_week": 13,
+            "weeks_on_list": 30,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/0063204150?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "0063204150",
+                    "isbn13": "9780063204157"
+                },
+                {
+                    "isbn10": "0063204185",
+                    "isbn13": "9780063204188"
+                },
+                {
+                    "isbn10": "0063204169",
+                    "isbn13": "9780063204164"
+                },
+                {
+                    "isbn10": "0063204177",
+                    "isbn13": "9780063204171"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "REMARKABLY BRIGHT CREATURES",
+                    "description": "A widow working the night shift at the Sowell Bay Aquarium is aided in solving a mystery by a giant Pacific octopus living there.",
+                    "contributor": "by Shelby Van Pelt",
+                    "author": "Shel Van Pelt",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Ecco",
+                    "primary_isbn13": "9780063204157",
+                    "primary_isbn10": "0063204150"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        },
+        {
+            "list_name": "Hardcover Fiction",
+            "display_name": "Hardcover Fiction",
+            "bestsellers_date": "2023-12-23",
+            "published_date": "2024-01-07",
+            "rank": 15,
+            "rank_last_week": 0,
+            "weeks_on_list": 1,
+            "asterisk": 0,
+            "dagger": 0,
+            "amazon_product_url": "https://www.amazon.com/dp/0593597036?tag=thenewyorktim-20",
+            "isbns": [
+                {
+                    "isbn10": "0593597036",
+                    "isbn13": "9780593597033"
+                }
+            ],
+            "book_details": [
+                {
+                    "title": "NORTH WOODS",
+                    "description": "A cabin in the woods in New England houses a collection of characters across centuries.",
+                    "contributor": "by Daniel Mason",
+                    "author": "Daniel Mason",
+                    "contributor_note": "",
+                    "price": "0.00",
+                    "age_group": "",
+                    "publisher": "Random House",
+                    "primary_isbn13": "9780593597033",
+                    "primary_isbn10": "0593597036"
+                }
+            ],
+            "reviews": [
+                {
+                    "book_review_link": "",
+                    "first_chapter_link": "",
+                    "sunday_review_link": "",
+                    "article_chapter_link": ""
+                }
+            ]
+        }
+    ]
+}
