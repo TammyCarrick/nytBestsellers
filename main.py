@@ -1,21 +1,30 @@
 import requests
 import pandas as pd
 import json
+from datetime import datetime
 
 API_KEY = "hMLYbAaYHCcTUusSPdLwngxxiU3GLIgI"
 
 
 
-
 def execute():
-    parameters = {'date': '2024-01-01', 'list':'hardcover-fiction', 'api-key': API_KEY}
+
+    # info to call get
     requestUrl = "https://api.nytimes.com/svc/books/v3/lists.json"
+    requestHeaders = {
+    "Accept": "application/json"
+    }
+
+    # generate a list of dates between a specified range
+    dates = pd.date_range(start='01/01/2000',end=  datetime.today(), freq = 'W-THU')
+
+    all_lists = requests.get(url=requestUrl, headers = requestHeaders, params = {'name': 'name'})
+
+
+    parameters = {'date': '2024-01-01', 'list':'hardcover-fiction', 'api-key': API_KEY}
 
     # tells the API that the format it's expecting to recieve is a json file. If the server supports this
     # it'll return a json, if not it may return an error or a different content type
-    requestHeaders = {
-        "Accept": "application/json"
-    }
 
     response = requests.get(url=requestUrl, headers=requestHeaders, params= parameters)
     # saves files to a json
