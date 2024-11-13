@@ -12,14 +12,28 @@ def execute():
     # info to call get
     requestUrl = "https://api.nytimes.com/svc/books/v3/lists.json"
     requestHeaders = {
-    "Accept": "application/json"
+        "Accept": "application/json"
     }
 
     # generate a list of dates between a specified range
     dates = pd.date_range(start='01/01/2000',end=  datetime.today(), freq = 'W-THU')
 
-    all_lists = requests.get(url=requestUrl, headers = requestHeaders, params = {'name': 'name'})
+    # get all the names of all the books lists that are still updated weekly
+    all_list_details = requests.get(url=requestUrl[:-5]+"/names.json?", headers = requestHeaders, params = {'name': 'name', 'api-key': API_KEY})
+    all_list_details = all_list_details.json()
+    num_lists = all_list_details["num_results"]
 
+    names_of_lists = []
+    # iterate through dict and get book names
+    for i in range(num_lists):
+        list_details = all_list_details["results"][i]
+
+        year = list_details["newest_published_date"][:4]
+
+        # only want book lists last updated in 2024 
+        if year == "2024":
+            names_of_lists.append(list_details["list_name_encoded"])
+    print(names_of_lists)
 
     parameters = {'date': '2024-01-01', 'list':'hardcover-fiction', 'api-key': API_KEY}
 
@@ -75,7 +89,7 @@ def execute():
     best_sellers = pd.DataFrame(data=d)
 
     pd.set_option('display.max_columns', 5)
-    print(best_sellers.head(n=5))
+    # print(best_sellers.head(n=5))
 
 
 if __name__ == "__main__":
