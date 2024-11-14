@@ -1,5 +1,12 @@
+# venv files 
 .venv/
+
+# rough work
 rw.py
 rw2.py
+
+# passwords
 *.env
+
+# data files
 *.json
