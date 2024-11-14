@@ -1,0 +1,5 @@
+.venv/
+rw.py
+rw2.py
+*.env
+*.json
