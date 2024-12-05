@@ -1,8 +1,15 @@
-import requests
 import pandas as pd
-import json
 from datetime import datetime
+from sqlalchemy import create_engine
+
+from dotenv import load_dotenv
+import os
 from grab_data import grab_books, grab_list_names
+
+load_dotenv()
+API_KEY = os.getenv('api_key')
+
+# def execute():
 
 
 def execute():
@@ -11,9 +18,15 @@ def execute():
     dates = pd.date_range(start='01/01/2000',end=  datetime.today(), freq = 'W-THU')
 
     # grab names of all bestseller lists
-    grab_list_names()
-    
-    grab_books('2024-01-01', 'hardcover-fiction')
+    all_lists = grab_list_names(API_KEY)
+
+    best_sellers = grab_books('2024-01-01', 'hardcover-fiction', API_KEY)
+
+    connection = create_connection
+
+    sql.write_frame
+
+
    
 if __name__ == "__main__":
     execute()

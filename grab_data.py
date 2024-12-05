@@ -1,24 +1,21 @@
 import requests
 import pandas as pd
-import json
 from datetime import datetime
-
-API_KEY = "hMLYbAaYHCcTUusSPdLwngxxiU3GLIgI"
 
 requestHeaders = {
     "Accept": "application/json"
 }
 
-def grab_books (date: str, list_name: str): 
-    """Return the list of books on the NYT Bestsellers list specified by the list name and date
+def grab_books (date: str, list_name: str, api_key: str): 
+    """Return the a dataframe of books on the NYT Bestsellers list specified by the list name and date
     
     Args:
         date (str): Date of the list to pull data from. Format yyyy-mm-dd
-        list_name (str): Name of the NYT Bestseller list to pull data from.  
+        list_name (str): Name of the NYT Bestseller list to pull data from
+        api_key (str): API key for NYT Bestsellers
     """
-
     requestUrl = "https://api.nytimes.com/svc/books/v3/lists.json"
-    parameters = {'date': date, 'list': list_name, 'api-key': API_KEY}
+    parameters = {'date': date, 'list': list_name, 'api-key': api_key}
 
     # tells the API that the format it's expecting to recieve is a json file. If the server supports this
     # it'll return a json, if not it may return an error or a different content type
@@ -66,16 +63,24 @@ def grab_books (date: str, list_name: str):
 
     # create dataframe from data
 
-    d = {"title": titles, "rank": curr_rank, "prev rank": prev_rank, "num weeks": num_weeks, "author": author, "publisher": publisher, "description": desc, "dagger": dagger, "amazon url": amazon_url}
+    d = {"title": titles, "rank": curr_rank, "prev rank": prev_rank, "num weeks": num_weeks,
+          "author": author, "publisher": publisher, "description": desc, "dagger": dagger, "amazon url": amazon_url}
 
     best_sellers = pd.DataFrame(data=d)
 
-    pd.set_option('display.max_columns', 5)
-    print(best_sellers.head(n=5))
+    return best_sellers
 
-def grab_list_names():
+    # pd.set_option('display.max_columns', 5)
+    # print(best_sellers.head(n=5))
+
+def grab_list_names(api_key: str):
+    """Return a name of all the categories of the NYT Bestsellers 
+
+    Arg:
+        api_key (str): API key to acces NYT Bestsellers
+    """
     requestURL = "https://api.nytimes.com/svc/books/v3/lists/names.json"
-    all_list_details = requests.get(url=requestURL, headers = requestHeaders, params = {'api-key': API_KEY})
+    all_list_details = requests.get(url=requestURL, headers = requestHeaders, params = {'api-key': api_key})
 
     all_list_details = all_list_details.json()
     num_lists = all_list_details["num_results"]
@@ -91,6 +96,7 @@ def grab_list_names():
         # only want book lists last updated in 2024 
         if year == "2024":
             names_of_lists.append(list_details["list_name_encoded"])
-    print(names_of_lists)
+    # print(names_of_lists)
 
+    return names_of_lists
    
