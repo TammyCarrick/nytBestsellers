@@ -1,5 +1,6 @@
 import pandas as pd
 from datetime import datetime
+import mysql.connector
 from sqlalchemy import create_engine
 
 from dotenv import load_dotenv
@@ -20,13 +21,26 @@ def execute():
     # grab names of all bestseller lists
     all_lists = grab_list_names(API_KEY)
 
-    best_sellers = grab_books('2024-01-01', 'hardcover-fiction', API_KEY)
+    best_sellers = grab_books('2024-10-24', 'hardcover-fiction', API_KEY)
 
-    connection = create_connection
+    # # initialize best sellers dataframe
+    # best_sellers = pd.DataFrame({"title": [], "rank": [], "prev rank": [], "num weeks": [],
+    #       "author": [], "publisher": [], "description": [], "dagger": [], "amazon url": []})
+    
+    # create connection to MySQL database
+    mydb = mysql.connector.connect(
+        host = os.getenv('host'),
+        user = 'admin',
+        password = os.getenv('password'),
+        database ='nytBestSellers'
+    )
 
-    sql.write_frame
+    # for day in dates[::-1]:
+    #     print(day.strftime('%Y-%m-%d'))
+    #     books = grab_books(day.strftime('%Y-%m-%d'),'hardcover-fiction', API_KEY)
+    #     best_sellers._append(books)
 
-
+    print(best_sellers)
    
 if __name__ == "__main__":
     execute()
