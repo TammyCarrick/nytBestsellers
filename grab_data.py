@@ -73,7 +73,7 @@ def grab_books (date: str, list_name: str, api_key: str):
     # pd.set_option('display.max_columns', 5)
     # print(best_sellers.head(n=5))
 
-def grab_list_names(api_key: str):
+def grab_list_details(api_key: str):
     """Return a name of all the categories of the NYT Bestsellers 
 
     Arg:
@@ -86,6 +86,9 @@ def grab_list_names(api_key: str):
     num_lists = all_list_details["num_results"]
 
     names_of_lists = []
+    oldest_published_date = []
+    newest_published_date = []
+    updated = []
 
     # iterate through dict and get book names only for lists last updated in 2024
     for i in range(num_lists):
@@ -93,10 +96,17 @@ def grab_list_names(api_key: str):
 
         year = list_details["newest_published_date"][:4]
 
-        # only want book lists last updated in 2024 
+        # only want the details of book lists last updated in 2024 
         if year == "2024":
             names_of_lists.append(list_details["list_name_encoded"])
+            oldest_published_date.append(list_details["oldest_published_date"])
+            newest_published_date.append(list_details["newest_published_date"])
+            updated.append(list_details["updated"])
     # print(names_of_lists)
 
-    return names_of_lists
+    # convert data to a dataframe and return
+    list_details = {"name": names_of_lists, "oldest_published_date":  oldest_published_date,
+                    "newest_published_date": newest_published_date, "updated": updated}
+    
+    return pd.DataFrame(data = list_details)
    
