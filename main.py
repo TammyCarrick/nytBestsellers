@@ -1,7 +1,7 @@
 import pandas as pd
 from datetime import datetime
 # import mysql.connector
-from sqlalchemy import create_engine, URL
+from sqlalchemy import create_engine, text
 
 from dotenv import load_dotenv
 import os
@@ -13,14 +13,6 @@ API_KEY = os.getenv('api_key')
 def connect():
     """Connect to MySQL database"""
 
-    # # create connection to MySQL database using mysql.connector
-    # mydb = mysql.connector.connect(
-    #     host = os.getenv('host'),
-    #     user = 'admin',
-    #     password = os.getenv('password'),
-    #     database ='nytBestSellers'
-    # )
-
     username = 'root'
     password = os.getenv('password')
     host = os.getenv('host')
@@ -29,9 +21,9 @@ def connect():
     engine = create_engine("mysql+mysqlconnector://{user}:{pw}@{host}/{db}".format(user = username, pw = password,
                            host = host, db = database))
 
-    df = pd.DataFrame({"col1":[1,2], "col2": [3,4]})
+    # df = pd.DataFrame({"col1":[1,2], "col2": [3,4]})
 
-    df.to_sql('tablel1', engine, if_exists = 'replace', index =False)
+    # df.to_sql('tablel1', engine, if_exists = 'replace', index =False)
 
     return engine
 
@@ -39,23 +31,33 @@ def connect():
 def store_lists_info():
     engine = connect()
 
+    # using api key to access nyt data
     list_details = grab_list_details(API_KEY)
-    print(list_details)
 
-    list_details.to_sql(name='lists_info', con=engine, if_exists='append', index=False)
+    # storing list_details in a table called lists_info
+    list_details.to_sql('lists_info', con=engine, if_exists='append', index=False)
 
 def execute():
+
+    # connect to database
+    engine = connect()
+    cnx = engine.connect()
 
     # generate a list of dates between a specified range
     dates = pd.date_range(start='01/01/2000',end=  datetime.today(), freq = 'W-THU')
 
     # grab names of all bestseller lists
+    query = "SELECT type_ from lists_info"
+    type_ = pd.read_sql(query, con = cnx)
+    list = type_["type_"].tolist()
 
-    best_sellers = grab_books('2024-10-24', 'hardcover-fiction', API_KEY)
+    print(list)
+
+    # best_sellers = grab_books('2024-10-24', 'hardcover-fiction', API_KEY)
 
     # # initialize best sellers dataframe
-    # best_sellers = pd.DataFrame({"title": [], "rank": [], "prev rank": [], "num weeks": [],
-    #       "author": [], "publisher": [], "description": [], "dagger": [], "amazon url": []})
+    best_sellers = pd.DataFrame({"title": [], "rank": [], "prev rank": [], "num weeks": [],
+          "author": [], "publisher": [], "description": [], "dagger": [], "amazon url": []})
     
 
     # for day in dates[::-1]:
@@ -66,5 +68,4 @@ def execute():
     print(best_sellers)
    
 if __name__ == "__main__":
-    connect()
-
+    execute()

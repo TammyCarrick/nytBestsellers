@@ -85,7 +85,7 @@ def grab_list_details(api_key: str):
     all_list_details = all_list_details.json()
     num_lists = all_list_details["num_results"]
 
-    names_of_lists = []
+    type_ = []
     oldest_published_date = []
     newest_published_date = []
     updated = []
@@ -98,14 +98,14 @@ def grab_list_details(api_key: str):
 
         # only want the details of book lists last updated in 2024 
         if year == "2024":
-            names_of_lists.append(list_details["list_name_encoded"])
+            type_.append(list_details["list_name_encoded"])
             oldest_published_date.append(list_details["oldest_published_date"])
             newest_published_date.append(list_details["newest_published_date"])
             updated.append(list_details["updated"])
     # print(names_of_lists)
 
     # convert data to a dataframe and return
-    list_details = {"name": names_of_lists, "oldest_published_date":  oldest_published_date,
+    list_details = {"type_": type_, "oldest_published_date":  oldest_published_date,
                     "newest_published_date": newest_published_date, "updated": updated}
     
     return pd.DataFrame(data = list_details)
