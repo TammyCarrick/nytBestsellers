@@ -63,12 +63,12 @@ def grab_books (date: str, list_name: str, api_key: str):
 
     # create dataframe from data
 
-    d = {"title": titles, "rank": curr_rank, "prev rank": prev_rank, "num weeks": num_weeks,
-          "author": author, "publisher": publisher, "description": desc, "dagger": dagger, "amazon url": amazon_url}
+    d = {"title": titles, "rank_": curr_rank, "prev_rank": prev_rank, "num_weeks": num_weeks,
+          "author": author, "publisher": publisher, "description_": desc, "dagger": dagger, "amazon_url": amazon_url}
 
     best_sellers = pd.DataFrame(data=d)
 
-    return best_sellers
+    return best_sellers, num_books
 
     # pd.set_option('display.max_columns', 5)
     # print(best_sellers.head(n=5))

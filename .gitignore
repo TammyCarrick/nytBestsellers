@@ -10,3 +10,4 @@ rw2.py
 
 # data files
 *.json
+__pycache__/grab_data.cpython-312.pyc

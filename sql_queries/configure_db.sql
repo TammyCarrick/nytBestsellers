@@ -25,5 +25,19 @@ CREATE TABLE IF NOT EXISTS raw_data (
 CREATE USER 'root'@'%' IDENTIFIED BY 'RE3Dmysql';
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
 
+-- rename column
 ALTER TABLE lists_info
 CHANGE oldest_published_draw_dataate oldest_published_date DATE;
+
+-- add priority column to determine order of which data is pulled
+ALTER TABLE lists_info
+ADD COLUMN priority INT;
+
+-- add date column to raw data table (so we know when the book was on the list and at what rank)
+ALTER TABLE nyt_best_sellers.raw_data
+-- ADD COLUMN date_on_list DATE,
+ADD COLUMN type_ VARCHAR(100);
+
+ALTER TABLE nyt_best_sellers.raw_data
+MODIFY amazon_url VARCHAR(300);
+
