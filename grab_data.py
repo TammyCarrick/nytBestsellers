@@ -25,8 +25,9 @@ def grab_books (date: str, list_name: str, api_key: str):
     # with open("data.json", 'w') as file:
     #     json.dump(response.json(), file)
 
-    num_books = response.json()["num_results"]
+    #num_books = response.json()["num_results"]
     books = response.json()["results"]
+    num_books = len(books)
 
     titles = []
     desc = []

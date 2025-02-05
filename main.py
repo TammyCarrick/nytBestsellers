@@ -2,7 +2,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 # import mysql.connector
 import time
-from sqlalchemy import create_engine, text
+from sqlalchemy import create_engine
 
 from dotenv import load_dotenv
 import os
@@ -14,7 +14,7 @@ API_KEYS = (os.getenv('api_key1'), os.getenv('api_key2'))
 def db_connect():
     """Connect to MySQL database"""
 
-    username = 'root'
+    username = os.getenv('user')
     password = os.getenv('password')
     host = os.getenv('host')
     database= 'nyt_best_sellers'
@@ -39,7 +39,7 @@ def store_lists_info():
     list_details.to_sql('lists_info', con=engine, if_exists='append', index=False)
 
 def oldest_date(list_name: str):
-    """Return the all the unique dates on the raw data table
+    """Return all the unique dates in the raw data table
     
     Arg:
         list_name: a string containing the name of the list you want to check eg: 'hardcover-fiction'
@@ -51,9 +51,10 @@ def oldest_date(list_name: str):
     query = "SELECT DISTINCT date_on_list FROM raw_data WHERE type_ = '{}' ORDER BY date_on_list LIMIT 1".format(list_name)
     result = pd.read_sql(query, con = cnx)
 
+    print(result.empty)
     #print((result['date_on_list'])[0])
 
-    return result['date_on_list'][0]
+    # return result['date_on_list'][0]
 
 def check_if_new(given_date: str, list_name: str)-> bool:
     """Return true if the combination of date and book list type will result in 
@@ -180,5 +181,5 @@ def execute(list_name: str):
 if __name__ == "__main__":
     #date_range("hardcover-fiction")
     #check_if_new("2024-12-01", 'combined-print-and-e-book-fiction')
-    #oldest_date('combined-print-and-e-book-fiction')
-    execute("combined-print-and-e-book-fiction")
+    oldest_date('combined-print-and-e-book-nonfiction')
+    # execute("combined-print-and-e-book-nonfiction")
