@@ -1,31 +1,13 @@
 import requests
 import os
 from dotenv import load_dotenv
-
 from sqlalchemy import create_engine
 import pandas as pd
+from main import db_connect
 
 load_dotenv()
 
 API_KEY = os.getenv('api_key_google')
-
-# move db_connect to grab_data and import it into main and metadata
-def db_connect():
-    """Connect to MySQL database"""
-
-    username = os.getenv('user')
-    password = os.getenv('password')
-    host = os.getenv('host')
-    database= 'nyt_best_sellers'
-
-    engine = create_engine("mysql+mysqlconnector://{user}:{pw}@{host}/{db}".format(user = username, pw = password,
-                           host = host, db = database))
-
-    # df = pd.DataFrame({"col1":[1,2], "col2": [3,4]})
-
-    # df.to_sql('tablel1', engine, if_exists = 'replace', index =False)
-
-    return engine
 
 def troubleshoot_log():
     """Adds books that haven't been logged to the troubleshoot_id table."""
