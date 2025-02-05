@@ -27,27 +27,6 @@ def db_connect():
 
     return engine
 
-def bulk_troubleshoot():
-    """Adds all books that haven't been logged in the volume id table to the troubleshoot table after all 
-    the books in the raw_data table have been iterated through"""
-
-    engine = db_connect()
-    cnx = engine.connect()
-
-    query3 = 'SELECT DISTINCT rd.author, rd.title\
-    FROM raw_data AS rd\
-        LEFT JOIN volumeid AS v\
-            ON rd.author=v.author AND rd.title = v.title\
-    WHERE v.author IS NULL \
-    ORDER BY rd.author, rd.title ASC;'
-
-    books = pd.read_sql(query3, cnx)
-
-    df = {'author': books['author'],'title': books['title']}
-    df = pd.DataFrame(data=df)
-
-    df.to_sql('troubleshoot_id', con=engine, if_exists='append', index= False)
-
 def troubleshoot_log():
     """Adds books that haven't been logged to the troubleshoot_id table."""
     engine = db_connect()
@@ -76,12 +55,112 @@ def troubleshoot_log():
 
     df.to_sql('troubleshoot_id', con=engine, if_exists='append', index= False)
 
-def volumeid_entries():
-    """Returns all the entries in the volume id table"""
-    engine = db_connect
-    cnx = engine.conntect()
+def get_troubleshoot():
+    """Return a dataframe of the troubleshoot_id table"""
 
-    query = "SELECT "
+    engine = db_connect()
+    cnx = engine.connect()
+
+    query = 'SELECT *\
+        FROM troubleshoot_id'
+
+    log = pd.read_sql(query, cnx)
+
+    author = log['author']
+    title = log['title']
+    date_on_list = log['date_on_list']
+
+    return author, title, date_on_list
+
+def populate_trouble(nrows = 50):
+    """"Grabs volume ids for the entries in the troubleshoot_id table
+    
+        Arg
+            nrows(int): specifies the number of entries to attempt to log
+    """
+
+    # differs from populate_ids because we search by keyname not by author name and check if the authors key name
+    # in search result not the last name 
+    # we can proably combine the methods into one (lots of duplicate code)
+
+    engine = db_connect()
+
+    authors, titles, dates = get_troubleshoot()
+    curr_ids = get_curr_ids()
+    num_entries = len(authors)
+
+    volume_ids = []
+    title_rslt = []
+    titles_searched = []
+    authors_searched = []
+    volume_ids_lower = []
+    all_f_names = []
+    all_m_names = []
+    all_l_names = []
+    i = 0
+    print('start')
+
+    while i < nrows and i < num_entries:   
+        name = key_name(authors[i]) # grabs the keyname for the author
+        year = str(dates[i].year) # grabs the year from the date
+        print(titles[i] + " " + year + ", " + name)
+        v, a, t = get_volumeID(titles[i] + " " + year, name) 
+
+        first_name, middle_name, last_name = parse_name(a)
+        middle_name = handle_middle_names(middle_name)
+
+        if last_name != None:
+            # check the last names match and the volume_ids are unique
+            if name in authors[i] and (v.lower() not in curr_ids) and (v.lower() not in volume_ids_lower):
+                volume_ids.append(v)
+                print(v)
+                volume_ids_lower.append(v.lower())
+                title_rslt.append(t)
+                titles_searched.append(titles[i])
+                authors_searched.append(authors[i])
+                all_f_names.append(first_name)
+                all_m_names.append(middle_name)
+                all_l_names.append(last_name)
+                print('num books:', i)
+
+        i += 1
+
+    df = {'volumeid': volume_ids, 'author': authors_searched,'title': titles_searched,'title_rslt': title_rslt,
+           'first_name': all_f_names, 'middle_name': all_m_names, 'last_name': all_l_names}
+    
+    df = pd.DataFrame(data=df)
+    print(df[['title', 'title_rslt', 'author', 'last_name']])
+
+    val = 'z'
+
+    while val != 'y' and val != 'n':
+        val = input('Please confirm upload to table (y/n):')
+    
+    if val == 'y':
+        df.to_sql('volumeid', con=engine, if_exists = 'append', index = False)
+
+
+def key_name(author: str):
+    """Returns the last name of (the first) author given a string containing author(s)
+    
+        Arg
+            author(str): author's name
+    """
+    # split string into a list of elements
+    names = author.split(" ")
+
+    # more than 1 name
+    if len(names) > 1:
+         # iterate through the author's names starting with the second 1 until we get a name longer than 1 character
+        for i in range(1,len(names)):
+            if len(names[i])>1:
+                # print(names[i])
+                return names[i]
+    
+    
+    # print(names[0])
+    return names[0]
+
 
 def unlogged_books(search_after = ""):
     """Return a list of books (titles and authors) whose volumeIDs have not been logged yet;
@@ -385,6 +464,8 @@ def verify_manual():
     data = file.read()
     vol_ids = data.replace('\n',' ').split(' ')
 
+    # finding common elements between 
+
     nrows = len(vol_ids)
 
     # inserting vol_ids into verified_ids table; manually verifying volume_ids
@@ -402,7 +483,8 @@ def verify_manual():
         
 
 if __name__== '__main__':
-#    get_volumeID('jiminez', 'Alice clayton')
+   
+#    get_volumeID('DEADLY ASSETS', 'griffin')
 #    unlogged_books()
     # populate_ids('', 500)
     # f,m,l = parse_name('Tatiana de Rosnay')
@@ -410,3 +492,5 @@ if __name__== '__main__':
     troubleshoot_log()
     # verify_manual()
     # is_unique('LhySAgAAQBAJ')
+    # key_name('Whitney G')
+    # populate_trouble(230)
