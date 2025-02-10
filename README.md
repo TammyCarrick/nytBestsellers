@@ -1,6 +1,6 @@
 ## New York Times Bestsellers Dashboard (2011 to 2024)
 
-**Dashboard depicting overview of book trends**
+**Dashboard depicting overview of bestselling book trends:**
 ![NYT Bestsellers dashboard](https://github.com/TammyCarrick/nytBestsellers/blob/main/dashboard.png)
 
 Interactive dashboard link [here.](https://public.tableau.com/app/profile/tammy.carrick/viz/NewYorkTimesBestsellers_17391608404480/BestsellersDashboard?publish=yes)
