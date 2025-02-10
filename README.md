@@ -12,8 +12,8 @@ Interactive dashboard link [here.](https://public.tableau.com/app/profile/tammy.
  - Exploratory data analysis was primarily conducting in MySQL; the code can be found [here.](https://github.com/TammyCarrick/nytBestsellers/tree/main/sql_queries)
 
 ## Key Takeaways
-  - the most popular genres from recent years are romance, thriller, and fantasy
-  - the average page count of bestselling books is 427 pages
-  - the average tenure on the list is 3.7 weeks
-  - the most prolific publishers are (Little, Brown), Grand Central, and Putnam
+  - the most popular genres from recent years are romance, thriller, and fantasy.
+  - the average page count of bestselling books is 427 pages.
+  - the average tenure on the list is 3.7 weeks.
+  - the most prolific publishers are (Little, Brown), Grand Central, and Putnam.
 
