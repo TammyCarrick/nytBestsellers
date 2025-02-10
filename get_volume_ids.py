@@ -201,7 +201,7 @@ def get_volumeID(title: str, author=''):
     response = requests.get(url = requestURL).json()
     volumeID, author_rslt, title_rslt = None, None, None # initialize values in case no result is found
 
-    # print (response)
+    print (response)
 
     # check the search returned at least one result
     if 'totalItems' in response and response['totalItems']> 0: # key exists and has at least 1 result
@@ -466,12 +466,12 @@ def verify_manual():
 
 if __name__== '__main__':
    
-#    get_volumeID('DEADLY ASSETS', 'griffin')
+   get_volumeID('Lost December 2011', 'evans')
 #    unlogged_books()
     # populate_ids('', 500)
     # f,m,l = parse_name('Tatiana de Rosnay')
     # print(f, " ",m, " ", l)
-    troubleshoot_log()
+    # troubleshoot_log()
     # verify_manual()
     # is_unique('LhySAgAAQBAJ')
     # key_name('Whitney G')
