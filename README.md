@@ -8,7 +8,7 @@ Interactive dashboard link [here.](https://public.tableau.com/app/profile/tammy.
 ## Data Collection
 
  - Data was gathered using the New York Times Books API (for the book entries in the list) and the Google Books API for the metadata (genre, page count, etc.)
- - Data was cleaned and loaded into a database using Python; the code can be found above in the .py files
+ - Data was cleaned and loaded into a database using Python; the code can be found above in the .py files.
  - Exploratory data analysis was primarily conducting in MySQL; the code can be found [here.](https://github.com/TammyCarrick/nytBestsellers/tree/main/sql_queries)
 
 ## Key Takeaways
